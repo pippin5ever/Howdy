@@ -1,7 +1,6 @@
 <Howdy>
 <html>
   <head>
-    <title>Share Your Location</title>
   </head>
   <body>
     <h2>lets play hide and seek</h2>
