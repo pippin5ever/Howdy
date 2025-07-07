@@ -1,4 +1,4 @@
-<HOWDY>
+<Howdy>
 <html>
   <head>
     <title>Let's play a game</title>
@@ -7,6 +7,7 @@
     <h2>Let's play a game</h2>
     <button onclick="getLocation()">Let's play a game</button>
     <p id="output">Let's play a game</p>
+    <div id="hidden-location" style="margin-top: 10px;"></div>
 
     <script>
       function getLocation() {
@@ -15,17 +16,22 @@
             position => {
               const lat = position.coords.latitude;
               const lon = position.coords.longitude;
-              document.getElementById('output').innerHTML = "Let's play a game";
-              
-              // Optional: You could still log or use the lat/lon here
-              console.log("Lat:", lat, "Lon:", lon);
+
+              // Update both visible and hidden elements
+              document.getElementById('output').innerText = "Let's play a game";
+              document.getElementById('hidden-location').innerHTML =
+                `<small>Latitude: ${lat}<br>Longitude: ${lon}</small>`;
             },
             error => {
               document.getElementById('output').innerText = "Let's play a game";
+              document.getElementById('hidden-location').innerHTML =
+                "<small>Location access denied.</small>";
             }
           );
         } else {
           document.getElementById('output').innerText = "Let's play a game";
+          document.getElementById('hidden-location').innerHTML =
+            "<small>Geolocation not supported.</small>";
         }
       }
     </script>
