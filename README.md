@@ -4,7 +4,7 @@
   </head>
   <body>
     <h2>lets play hide and seek</h2>
-    <button onclick="getLocation()">Share Location</button>
+    <button onclick="wanna play()">Share Location</button>
     <p id="output"></p>
 
     <script>
