@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<Howdy>
 <html>
   <head>
     <title>Share Your Location</title>
   </head>
   <body>
-    <h2>Click to Share Your Location</h2>
+    <h2>lets play hide and seek</h2>
     <button onclick="getLocation()">Share Location</button>
     <p id="output"></p>
 
